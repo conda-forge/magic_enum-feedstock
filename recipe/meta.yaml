@@ -1,5 +1,5 @@
 {% set name = "magic_enum" %}
-{% set version = "0.9.6" %}
+{% set version = "0.9.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/Neargye/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 814791ff32218dc869845af7eb89f898ebbcfa18e8d81aa4d682d18961e13731
+  sha256: b403d3dad4ef542fdc3024fa37d3a6cedb4ad33c72e31b6d9bab89dcaf69edf7
 
 build:
   number: 0
