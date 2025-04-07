@@ -10,19 +10,19 @@ source:
   sha256: b403d3dad4ef542fdc3024fa37d3a6cedb4ad33c72e31b6d9bab89dcaf69edf7
 
 build:
-  number: 0
-  skip: true  # [win]
+  number: 1
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
     - cmake
-    - make  # [unix]
+    - make                # [not win]
+    - ninja               # [win]
 
 test:
   commands:
-    - test -f ${PREFIX}/include/magic_enum/magic_enum.hpp  # [unix]
+    - test -f ${PREFIX}/include/magic_enum/magic_enum.hpp  # [not win]
 
 about:
   home: https://github.com/Neargye/magic_enum
